@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "altfreeze"
+version = "1.0.0"
+description = "Conservative offline short-alt approval control for revised EPUB 3 production files"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{name = "altfreeze contributors"}]
+classifiers = ["Programming Language :: Python :: 3", "Operating System :: OS Independent"]
+dependencies = ["Pillow>=12.0,<13"]
+
+[project.urls]
+Repository = "https://github.com/waxwingfactor/altfreeze"
+Issues = "https://github.com/waxwingfactor/altfreeze/issues"
+
+[project.scripts]
+altfreeze = "altfreeze.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
