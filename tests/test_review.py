@@ -178,7 +178,9 @@ console.log(JSON.stringify({downloaded:downloaded!==null,
   output:downloaded ? JSON.parse(downloaded.parts[0]) : null,
   error:elements['error-summary'].children.p.textContent}));
 """
-    result = subprocess.run([node], input=code, text=True, capture_output=True, timeout=20)
+    # Node emits UTF-8; Windows' locale default can otherwise decode Unicode
+    # decision JSON as a legacy code page and corrupt valid boundary fixtures.
+    result = subprocess.run([node], input=code, encoding="utf-8", capture_output=True, timeout=20)
     assert result.returncode == 0, result.stderr
     return json.loads(result.stdout)
 

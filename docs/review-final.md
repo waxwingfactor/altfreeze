@@ -1,6 +1,6 @@
 # Independent AI-agent focused re-review
 
-Date: 2026-10-15. Reviewer: separate AI agent assigned adversarial competition and code review. This is an independent AI review, not a human approval or a review from another GitHub account. The reviewer did not edit application source files. This record supplements the initial findings in `independent-code-review.md` and preserves their history.
+Date: 2026-10-15. Reviewer: separate AI agent assigned adversarial competition and code review. This is an independent AI review, not a human approval or a review from another GitHub account. The reviewer did not edit application source files. This record supplements the initial findings in [review-initial.md](review-initial.md) and preserves their history.
 
 ## Result
 
@@ -36,3 +36,5 @@ These fixture decisions were engineering transaction tests, not substantive huma
 ## Remaining review limits
 
 The supported profile excludes many legitimate EPUB constructs. In particular, explicit semantic roles, linked/control images, long descriptions, SVG, fixed layout, font-obfuscation/encryption files and several media types require other tools. Hashes and attribution are not signatures. Cross-chapter semantic effects and description quality remain editorial responsibilities. Documentation was reviewed as it appeared; final public links, release hashes, installed behavior and rendered states still require release verification.
+
+The script/result basenames above identify internal engineering work artifacts; they are not bundled executables. The source tests and public release verification assets are the reproducible supported evidence.
